@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คณะผู้บริหาร - อบต.นาไม้ไผ่</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Prompt', sans-serif; } </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow">อบต</div>
+                <div>
+                    <h1 class="font-bold text-lg md:text-xl text-emerald-900 leading-tight">องค์การบริหารส่วนตำบลนาไม้ไผ่</h1>
+                    <p class="text-xs text-slate-500">อำเภอทุ่งสง จังหวัดนครศรีธรรมราช</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 font-medium text-slate-700">
+                <a href="index.html" class="hover:text-emerald-600 transition">หน้าแรก</a>
+                <a href="executives.html" class="text-emerald-600 font-semibold border-b-2 border-emerald-600 pb-1">คณะผู้บริหาร</a>
+                <a href="eservice.html" class="hover:text-emerald-600 transition">บริการประชาชน (E-Service)</a>
+                <a href="eservice.html#contact" class="hover:text-emerald-600 transition">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Title Banner -->
+    <div class="bg-emerald-800 text-white py-8 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-2">โครงสร้างคณะผู้บริหาร</h2>
+            <p class="text-emerald-200 text-sm">องค์การบริหารส่วนตำบลนาไม้ไผ่ อำเภอทุ่งสง จังหวัดนครศรีธรรมราช</p>
+        </div>
+    </div>
+
+    <!-- Executive Members Grid -->
+    <main class="max-w-7xl mx-auto px-4 py-12 flex-1">
+        
+        <!-- Top Leader: นายก อบต. -->
+        <div class="flex justify-center mb-12">
+            <div class="bg-white rounded-2xl shadow-xl border border-emerald-100 p-6 max-w-sm w-full text-center relative overflow-hidden">
+                <div class="w-32 h-32 mx-auto rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-emerald-500 shadow-md">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="นายก อบต." class="w-full h-full object-cover">
+                </div>
+                <span class="bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-semibold">ผู้บริหารสูงสุด</span>
+                <h3 class="text-xl font-bold text-slate-800 mt-2">นายสมศักดิ์ รักชาติ</h3>
+                <p class="text-emerald-600 font-medium text-sm">นายกองค์การบริหารส่วนตำบลนาไม้ไผ่</p>
+                <p class="text-slate-500 text-xs mt-3"><i class="fa-solid fa-phone mr-1"></i> 075-809-721 ต่อ 101</p>
+            </div>
+        </div>
+
+        <!-- Deputy Leaders: รองนายก และ เลขานุการ -->
+        <div class="text-center mb-6">
+            <h3 class="text-lg font-bold text-slate-700 underline decoration-emerald-500 decoration-2 underline-offset-8">คณะผู้บริหารและฝ่ายสภา</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-md p-5 text-center border border-slate-100 hover:shadow-lg transition">
+                <div class="w-24 h-24 mx-auto rounded-full bg-slate-200 mb-3 overflow-hidden border-2 border-slate-300">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="รองนายก" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold text-slate-800 text-base">นางวิภาวรรณ ใจดี</h4>
+                <p class="text-emerald-600 text-xs font-medium">รองนายก อบต. (คนที่ 1)</p>
+                <p class="text-slate-400 text-xs mt-2">ดูแลงานบริหารทั่วไปและพัฒนาสังคม</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-md p-5 text-center border border-slate-100 hover:shadow-lg transition">
+                <div class="w-24 h-24 mx-auto rounded-full bg-slate-200 mb-3 overflow-hidden border-2 border-slate-300">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" alt="รองนายก" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold text-slate-800 text-base">นายประเสริฐ มั่นคง</h4>
+                <p class="text-emerald-600 text-xs font-medium">รองนายก อบต. (คนที่ 2)</p>
+                <p class="text-slate-400 text-xs mt-2">ดูแลโครงสร้างพื้นฐานและโยธา</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-md p-5 text-center border border-slate-100 hover:shadow-lg transition">
+                <div class="w-24 h-24 mx-auto rounded-full bg-slate-200 mb-3 overflow-hidden border-2 border-slate-300">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="ปละ" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold text-slate-800 text-base">นายอนุรักษ์ เจริญยิ่ง</h4>
+                <p class="text-emerald-600 text-xs font-medium">ปลัดองค์การบริหารส่วนตำบล</p>
+                <p class="text-slate-400 text-xs mt-2">หัวหน้าส่วนราชการประจำ</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-center py-6 text-xs">
+        &copy; 2026 องค์การบริหารส่วนตำบลนาไม้ไผ่ - หน้าโครงสร้างคณะผู้บริหาร
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บริการประชาชน E-Service - อบต.นาไม้ไผ่</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style> body { font-family: 'Prompt', sans-serif; } </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-bold text-xl shadow">อบต</div>
+                <div>
+                    <h1 class="font-bold text-lg md:text-xl text-emerald-900 leading-tight">องค์การบริหารส่วนตำบลนาไม้ไผ่</h1>
+                    <p class="text-xs text-slate-500">อำเภอทุ่งสง จังหวัดนครศรีธรรมราช</p>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 font-medium text-slate-700">
+                <a href="index.html" class="hover:text-emerald-600 transition">หน้าแรก</a>
+                <a href="executives.html" class="hover:text-emerald-600 transition">คณะผู้บริหาร</a>
+                <a href="eservice.html" class="text-emerald-600 font-semibold border-b-2 border-emerald-600 pb-1">บริการประชาชน (E-Service)</a>
+                <a href="#contact" class="hover:text-emerald-600 transition">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bg-emerald-800 text-white py-8 px-4 text-center">
+        <h2 class="text-3xl font-bold mb-2">ระบบบริการประชาชนออนไลน์ (E-Service)</h2>
+        <p class="text-emerald-200 text-sm">สะดวก รวดเร็ว ปลอดภัย ยื่นคำร้องได้ตลอด 24 ชั่วโมง</p>
+    </div>
+
+    <main class="max-w-5xl mx-auto px-4 py-10 flex-1 w-full space-y-12">
+
+        <!-- Section 1: Complaint Form -->
+        <section id="complaint" class="bg-white p-6 md:p-8 rounded-2xl shadow-md border border-slate-100">
+            <div class="border-b pb-4 mb-6 flex items-center justify-between">
+                <div>
+                    <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded">One Stop Service</span>
+                    <h3 class="text-xl font-bold text-slate-800 mt-1"><i class="fa-solid fa-pen-to-square text-emerald-600 mr-2"></i>แบบฟอร์มแจ้งเรื่องร้องเรียน / ร้องทุกข์</h3>
+                </div>
+            </div>
+
+            <form id="complaintForm" onsubmit="submitForm(event)" class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">ชื่อ-นามสกุล ผู้แจ้ง *</label>
+                        <input type="text" required placeholder="นาย/นาง/นางสาว..." class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">เบอร์โทรศัพท์ติดต่อ *</label>
+                        <input type="tel" required placeholder="08X-XXX-XXXX" class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">ประเภทเรื่องร้องเรียน *</label>
+                    <select required class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <option value="">-- กรุณาเลือกประเภท --</option>
+                        <option value="1">โครงสร้างพื้นฐาน (ถนน, ไฟฟ้าส่องสว่าง, น้ำประปา)</option>
+                        <option value="2">เหตุรำคาญ / ขยะมูลฝอย / สิ่งแวดล้อม</option>
+                        <option value="3">ขอความช่วยเหลือภัยพิบัติ</option>
+                        <option value="4">ข้อเสนอแนะ / แจ้งเบาะแสการทุจริต (No Gift Policy)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">รายละเอียดเรื่องร้องเรียน / สถานที่เกิดเหตุ *</label>
+                    <textarea rows="4" required placeholder="ระบุรายละเอียด เช่น หมู่ที่, จุดสังเกต..." class="w-full border border-slate-300 rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition w-full md:w-auto">
+                        <i class="fa-solid fa-paper-plane mr-2"></i>ส่งข้อมูลร้องเรียน
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Alert Box (Hidden by default) -->
+            <div id="alertBox" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 rounded-lg text-emerald-800 text-sm">
+                <i class="fa-solid fa-circle-check mr-2 text-emerald-600 text-base"></i>
+                <strong>ส่งข้อมูลสำเร็จ!</strong> ระบบได้รับการส่งเรื่องของท่านเรียบร้อยแล้ว เจ้าหน้าที่จะดำเนินการตรวจสอบโดยเร็วที่สุด
+            </div>
+        </section>
+
+        <!-- Section 2: Contact Info -->
+        <section id="contact" class="bg-slate-900 text-white p-6 md:p-8 rounded-2xl shadow-md">
+            <h3 class="text-xl font-bold mb-4"><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i>ข้อมูลการติดต่อ อบต.นาไม้ไผ่</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-300">
+                <div class="space-y-3">
+                    <p><strong class="text-white">ที่อยู่:</strong> 110/1 หมู่ที่ 8 ตำบลนาไม้ไผ่ อำเภอทุ่งสง จังหวัดนครศรีธรรมราช 80110</p>
+                    <p><strong class="text-white">โทรศัพท์:</strong> 075-809-721</p>
+                    <p><strong class="text-white">อีเมล:</strong> contact@namaiphai.go.th</p>
+                </div>
+                <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                    <h4 class="font-bold text-white mb-2">เวลาทำการ</h4>
+                    <p class="text-xs">วันจันทร์ - วันศุกร์: 08:30 - 16:30 น.</p>
+                    <p class="text-xs text-slate-400 mt-1">(เว้นวันหยุดราชการและวันนักขัตฤกษ์)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-500 text-center py-4 text-xs border-t border-slate-800">
+        &copy; 2026 องค์การบริหารส่วนตำบลนาไม้ไผ่ - ระบบบริการประชาชนออนไลน์
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('alertBox');
+            alertBox.classList.remove('hidden');
+            document.getElementById('complaintForm').reset();
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
